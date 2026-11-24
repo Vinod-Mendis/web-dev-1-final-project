@@ -1,0 +1,415 @@
+/**
+ * Home page styles
+ *
+ * @format
+ */
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 6vw;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  min-height: calc(100vh - 9rem);
+  margin-bottom: 0;
+  padding-bottom: 2.5rem;
+  position: relative;
+  /* full width */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* Hero coffee bean background */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../assets/images/general/coffee-seed-bg.webp");
+  background-size: contain;
+  background-position: center 85%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  animation: bean-zoom 6s ease-in-out infinite alternate;
+}
+
+/* Bean zoom animation */
+@keyframes bean-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+/* Hero big title */
+.hero h1.hero-big {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-size: 15vw;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-leaf);
+  margin: 0;
+}
+
+/* Hero hand and cup image */
+.hero-hand {
+  position: absolute;
+  bottom: -18%;
+  left: 50%;
+  transform: translateX(-31%);
+  height: 95%;
+  width: auto;
+  max-width: none;
+  z-index: 1;
+}
+
+/* Hero title letters */
+.hero-big span {
+  display: inline-block;
+  animation: wiggle 5s ease-in-out infinite;
+}
+
+/* Delay for each letter */
+.hero-big span:nth-child(1) {
+  animation-delay: 1s;
+}
+.hero-big span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.hero-big span:nth-child(3) {
+  animation-delay: 1.4s;
+}
+.hero-big span:nth-child(4) {
+  animation-delay: 1.6s;
+}
+.hero-big span:nth-child(5) {
+  animation-delay: 1.8s;
+}
+.hero-big span:nth-child(6) {
+  animation-delay: 2s;
+}
+.hero-big span:nth-child(7) {
+  animation-delay: 2.2s;
+}
+.hero-big span:nth-child(8) {
+  animation-delay: 2.4s;
+}
+.hero-big span:nth-child(9) {
+  animation-delay: 2.6s;
+}
+.hero-big span:nth-child(10) {
+  animation-delay: 2.8s;
+}
+.hero-big span:nth-child(11) {
+  animation-delay: 3s;
+}
+
+/* Letter wiggle animation */
+@keyframes wiggle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-1.2vw) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(1vw) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Intro section */
+section.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  background-color: var(--color-leaf);
+  background-image:
+    linear-gradient(rgba(31, 71, 0, 0.7), rgba(31, 71, 0, 0.7)),
+    url("../assets/images/general/pattern.png");
+  background-size: auto, 40rem;
+  background-repeat: no-repeat, repeat;
+  color: var(--color-bg);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 4.5rem max(1.75rem, calc(50vw - 36rem));
+}
+
+section.intro h2 {
+  margin: 0;
+  color: var(--color-bg);
+}
+
+section.intro p {
+  max-width: 34rem;
+  font-size: 1.2rem;
+  color: var(--color-bg);
+  margin: 0;
+}
+
+/* Small label above the Featured and Why headings */
+.featured h2,
+.why h2 {
+  max-width: none;
+}
+
+.featured h2::before,
+.why h2::before {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.featured h2::before {
+  content: "On the bar";
+}
+.why h2::before {
+  content: "The short version";
+}
+
+/* Featured drinks grid */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: start;
+  gap: 1.4rem;
+}
+
+/* Drink card */
+.card {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.photo {
+  overflow: hidden;
+  background: var(--color-leaf);
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+  transition: transform 0.6s ease;
+}
+
+.card:hover img {
+  transform: scale(1.04);
+}
+
+.card h3 {
+  margin-top: 0.9rem;
+}
+
+.card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  max-width: 24rem;
+}
+
+/* Card price */
+.card p.card-price {
+  margin-top: -0.5rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* Why section: heading on the left, reasons list on the right */
+.why {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 2rem;
+  align-items: start;
+  padding-top: 1rem;
+}
+
+.reasons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: reason;
+}
+
+.reasons li {
+  counter-increment: reason;
+  display: flex;
+  gap: 1.1rem;
+  align-items: baseline;
+  border-top: 1px solid var(--color-border);
+  padding: 1.15rem 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+/* Reason hover effect */
+.reasons li {
+  transition:
+    color 0.3s,
+    padding-left 0.3s;
+}
+
+.reasons li:hover {
+  color: var(--color-accent);
+  padding-left: 0.75rem;
+}
+
+.reasons li::before {
+  content: counter(reason, decimal-leading-zero);
+  flex: 0 0 auto;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--color-accent);
+}
+
+/* Visit section */
+.visit {
+  background-color: var(--color-leaf);
+  background-image:
+    linear-gradient(rgba(31, 71, 0, 0.7), rgba(31, 71, 0, 0.7)),
+    url("../assets/images/general/pattern.png");
+  background-size: auto, 40rem;
+  background-repeat: no-repeat, repeat;
+  color: #f1f6ec;
+  position: relative;
+  /* space above the band for the cup */
+  margin-top: 22rem;
+  margin-bottom: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 2.5rem max(1.75rem, calc(50vw - 36rem)) 2.5rem;
+  /* text on the right half */
+  padding-left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 15rem;
+}
+
+/* Big cup image */
+.visit-cup {
+  position: absolute;
+  left: 10vw;
+  bottom: 0;
+  height: 44rem;
+  width: auto;
+}
+
+.visit h2 {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  max-width: none;
+  margin-bottom: 1rem;
+  color: #f1f6ec;
+}
+
+.visit p {
+  max-width: 26rem;
+  font-size: 1.1rem;
+}
+
+.visit .button {
+  margin-top: 0.5rem;
+  border-color: #f1f6ec;
+  background: transparent;
+  color: #f1f6ec;
+}
+
+.visit a.button:link,
+.visit a.button:visited {
+  color: #f1f6ec;
+}
+
+.visit .button:hover,
+.visit a.button:hover {
+  background: #f1f6ec;
+  color: var(--color-leaf);
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .why {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 36rem) {
+  /* Hero on mobile */
+  .hero {
+    min-height: calc(100vh - 7rem);
+  }
+
+  .hero {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .hero h1.hero-big {
+    white-space: normal;
+    font-size: 30vw;
+  }
+
+  /* Smaller hand and cup */
+  .hero-hand {
+    height: 70%;
+    bottom: -12%;
+  }
+
+  /* Visit section: cup goes above the text */
+  .visit {
+    margin-top: 11rem;
+    padding-left: 1.75rem;
+    min-height: 0;
+  }
+
+  .visit-cup {
+    left: 50%;
+    top: -11rem;
+    bottom: auto;
+    height: 22rem;
+    transform: translateX(-50%);
+  }
+
+  /* Cards: two columns */
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 0.75rem;
+  }
+
+  .card img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .visit {
+    padding: 12.5rem 1.2rem 3.4rem;
+  }
+}
