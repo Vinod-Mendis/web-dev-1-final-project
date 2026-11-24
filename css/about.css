@@ -1,0 +1,226 @@
+/* About page styles */
+
+/* Page title */
+.about-page > h1 {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Small label above the Process and Crew headings */
+.process h2,
+.crew h2,
+.film h2 {
+  max-width: none;
+}
+
+.process h2::before,
+.crew h2::before {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* Process section (green band) */
+.process {
+  background-color: var(--color-leaf);
+  background-image: linear-gradient(rgba(31, 71, 0, 0.7), rgba(31, 71, 0, 0.7)), url("../assets/images/general/pattern.png");
+  background-size: auto, 40rem;
+  background-repeat: no-repeat, repeat;
+  color: var(--color-bg);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 4rem max(1.75rem, calc(50vw - 36rem));
+}
+
+.process h2,
+.process .steps li {
+  color: var(--color-bg);
+}
+
+.process h2::before,
+.process .steps li::before {
+  color: #c9deb8;
+}
+
+.process .steps li {
+  border-top-color: rgba(241, 246, 236, 0.3);
+}
+
+.process h2::before { content: "Six quiet steps"; }
+.crew h2::before { content: "The people"; }
+
+/* Story section (hero with video background) */
+.story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+  margin-bottom: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 4rem max(1.75rem, calc(50vw - 36rem));
+  overflow: hidden;
+}
+
+/* Story background video */
+.story-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark layer over the video */
+.story::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 25, 8, 0.6);
+  z-index: 1;
+}
+
+/* Story content stays above the video */
+.story h2,
+.story-image,
+.story p {
+  position: relative;
+  z-index: 2;
+}
+
+.story h2 {
+  margin-bottom: 1rem;
+  color: var(--color-bg);
+}
+
+/* Story logo (shown above the heading) */
+.story-image {
+  order: -1;
+  width: 18rem;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 1.5rem;
+  border: none;
+}
+
+.story p {
+  font-size: 1.08rem;
+  color: var(--color-bg);
+  max-width: 36rem;
+}
+
+/* Process steps list */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+}
+
+.steps li {
+  counter-increment: step;
+  border-top: 1px solid var(--color-border);
+  padding: 0.9rem 0 1.4rem;
+  font-size: 1.08rem;
+}
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--color-accent);
+}
+
+/* Crew grid and member cards */
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem 1rem;
+}
+
+.member {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.member img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 3 / 4;
+  margin-bottom: 0.85rem;
+  object-fit: cover;
+}
+
+.member p {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+/* Member role label */
+.role {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* Film section */
+.film p {
+  max-width: 34rem;
+  color: var(--color-muted);
+}
+
+.film video {
+  margin-top: 0.5rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .team {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 36rem) {
+  .steps,
+  .team {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image {
+    width: 12rem;
+  }
+
+  .member img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

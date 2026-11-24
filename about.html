@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Jake's Coffee</title>
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+  <!-- Header: shop name and navigation -->
+  <header class="site-header">
+    <p class="logo"><a href="index.html"><img src="assets/images/general/logo.png" alt="Jake's Coffee" width="150" height="98"></a></p>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="current" aria-current="page">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-page">
+    <h1>About us</h1>
+
+    <section class="story">
+      <!-- Background video: plays by itself, loops, no sound -->
+      <video class="story-video" autoplay loop muted>
+        <source src="assets/videos/idle-video.mp4" type="video/mp4">
+      </video>
+      <h2>Our Story</h2>
+      <img class="story-image" src="assets/images/general/logo.png" alt="Jake's Coffee logo" width="400" height="260">
+      <p>Jake moved to Phnom Penh in 2021 and spent a year pulling shots at a cafe near the Russian Market. In 2023 he rented a narrow shop on Street 308 and opened Jake's Coffee with one grinder and four tables.</p>
+      <p>Most of our coffee comes from small farms in Mondulkiri. Sreymom roasts it in the back room. Out front, the team keeps things simple: a good cup, a warm pastry, and a seat if you want to stay.</p>
+    </section>
+
+    <section class="process">
+      <h2>From bean to cup</h2>
+      <ol class="steps">
+        <li>Farmers in Mondulkiri pick and dry the coffee cherries.</li>
+        <li>We buy the green beans in small sacks.</li>
+        <li>Sreymom roasts a batch every Monday morning.</li>
+        <li>The beans rest for two days so the flavor can settle.</li>
+        <li>We grind each order right before it is brewed.</li>
+        <li>Your drink is poured and handed across the counter.</li>
+      </ol>
+    </section>
+
+    <section class="crew">
+      <h2>Meet the Team</h2>
+      <div class="team">
+        <article class="member">
+          <img src="assets/images/team/jake.jpg" alt="Jake Chen holding a coffee cup" width="400" height="533">
+          <h3>Jake Chen</h3>
+          <p class="role">Owner</p>
+          <p>Opens the shop, trains the baristas, and still works the morning shift.</p>
+        </article>
+        <article class="member">
+          <img src="assets/images/team/sreymom.jpg" alt="Sreymom Keo examining coffee beans" width="400" height="533">
+          <h3>Sreymom Keo</h3>
+          <p class="role">Roaster</p>
+          <p>Runs the roaster in the back room and tastes every batch.</p>
+        </article>
+        <article class="member">
+          <img src="assets/images/team/david.jpg" alt="David Lim holding an iced latte" width="400" height="533">
+          <h3>David Lim</h3>
+          <p class="role">Barista</p>
+          <p>Makes most of the iced drinks and remembers regular orders.</p>
+        </article>
+        <article class="member">
+          <img src="assets/images/team/nita.jpg" alt="Nita Sok holding a croissant" width="400" height="533">
+          <h3>Nita Sok</h3>
+          <p class="role">Baker</p>
+          <p>Bakes the croissants and banana bread before we unlock the door.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="film">
+      <h2>A morning in the shop</h2>
+      <p>Press play for a short look at Monday morning, when Sreymom roasts the week's coffee.</p>
+      <video autoplay loop muted>
+        <source src="assets/videos/cafe-video.mp4" type="video/mp4">
+        Your browser cannot play this video. Visit the shop and we will show you around.
+      </video>
+    </section>
+  </main>
+
+  <!-- Footer: address, hours, copyright -->
+  <footer class="site-footer">
+    <!-- Footer logo and links -->
+    <div class="footer-top">
+      <a href="index.html"><img src="assets/images/general/logo.png" alt="Jake's Coffee" width="150" height="98"></a>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p>No. 27, Street 308, Boeung Keng Kang 1, Phnom Penh</p>
+    <p>Mon-Fri 7:00 a.m. - 6:30 p.m. Sat-Sun 8:00 a.m. - 5:00 p.m.</p>
+    <p>&copy; 2026 Jake's Coffee</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
