@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | Jake's Coffee</title>
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+  <!-- Header: shop name and navigation -->
+  <header class="site-header">
+    <p class="logo"><a href="index.html"><img src="assets/images/general/logo.png" alt="Jake's Coffee" width="150" height="98"></a></p>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html" class="current" aria-current="page">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="menu-page">
+    <h1>Our menu</h1>
+    <p class="intro">We keep the menu short so everything stays fresh. Coffee is roasted here, and Nita bakes the pastries before opening. Prices are in US dollars.</p>
+
+    <!-- Filter buttons. script.js shows and hides matching cards. -->
+    <div class="filters">
+      <button type="button" class="button filter-button is-active" data-category="all">All</button>
+      <button type="button" class="button filter-button" data-category="coffee">Coffee</button>
+      <button type="button" class="button filter-button" data-category="pastries">Pastries</button>
+      <button type="button" class="button view-toggle" id="view-toggle">Table view</button>
+    </div>
+    <!-- Menu cards. One card per photo in assets/images/coffee and assets/images/pastry. -->
+    <div class="menu-grid" id="menu-grid">
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_Americano.jpg" alt="Iced Americano" width="400" height="400"></div>
+        <h3>Iced Americano</h3>
+        <p class="menu-desc">Espresso, cold water, ice</p>
+        <p class="menu-price">$2.75</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_caffe_latte.jpg" alt="Iced Caffe Latte" width="400" height="400"></div>
+        <h3>Iced Caffe Latte</h3>
+        <p class="menu-desc">Espresso, cold milk, ice</p>
+        <p class="menu-price">$3.75</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_cappuccino.jpg" alt="Iced Cappuccino" width="400" height="400"></div>
+        <h3>Iced Cappuccino</h3>
+        <p class="menu-desc">Espresso, milk, milk foam</p>
+        <p class="menu-price">$3.75</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_mocha.jpg" alt="Iced Mocha" width="400" height="400"></div>
+        <h3>Iced Mocha</h3>
+        <p class="menu-desc">Espresso, chocolate, milk</p>
+        <p class="menu-price">$4.00</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_vanilla_latte.jpg" alt="Iced Vanilla Latte" width="400" height="400"></div>
+        <h3>Iced Vanilla Latte</h3>
+        <p class="menu-desc">Espresso, vanilla syrup, milk</p>
+        <p class="menu-price">$4.00</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_hazelnut_latte.jpg" alt="Iced Hazelnut Latte" width="400" height="400"></div>
+        <h3>Iced Hazelnut Latte</h3>
+        <p class="menu-desc">Espresso, hazelnut syrup, milk</p>
+        <p class="menu-price">$4.00</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_matcha_latte.jpg" alt="Iced Matcha Latte" width="400" height="400"></div>
+        <h3>Iced Matcha Latte</h3>
+        <p class="menu-desc">Matcha, milk, ice</p>
+        <p class="menu-price">$4.00</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_Dalgona_coffee.jpg" alt="Iced Dalgona Coffee" width="400" height="400"></div>
+        <h3>Iced Dalgona Coffee</h3>
+        <p class="menu-desc">Whipped coffee, milk, ice</p>
+        <p class="menu-price">$4.00</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_coffee_frappe.jpg" alt="Iced Coffee Frappe" width="400" height="400"></div>
+        <h3>Iced Coffee Frappe</h3>
+        <p class="menu-desc">Coffee, milk, ice</p>
+        <p class="menu-price">$4.25</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_brown_sugar_latte.jpg" alt="Iced Brown Sugar Latte" width="400" height="400"></div>
+        <h3>Iced Brown Sugar Latte</h3>
+        <p class="menu-desc">Espresso, brown sugar, milk</p>
+        <p class="menu-price">$4.00</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_white_chocolate_mocha.jpg" alt="Iced White Chocolate Mocha" width="400" height="400"></div>
+        <h3>Iced White Chocolate Mocha</h3>
+        <p class="menu-desc">Espresso, white chocolate, milk</p>
+        <p class="menu-price">$4.25</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_caramel_macchiato.jpg" alt="Iced Caramel Macchiato" width="400" height="400"></div>
+        <h3>Iced Caramel Macchiato</h3>
+        <p class="menu-desc">Espresso, caramel, milk</p>
+        <p class="menu-price">$4.25</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_dirty_matcha_latte.jpg" alt="Iced Dirty Matcha Latte" width="400" height="400"></div>
+        <h3>Iced Dirty Matcha Latte</h3>
+        <p class="menu-desc">Matcha, espresso, milk</p>
+        <p class="menu-price">$4.25</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Cold_brew_coffee.jpg" alt="Cold Brew Coffee" width="400" height="400"></div>
+        <h3>Cold Brew Coffee</h3>
+        <p class="menu-desc">Coffee, cold water, ice</p>
+        <p class="menu-price">$3.25</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_Spanish_latte.jpg" alt="Iced Spanish Latte" width="400" height="400"></div>
+        <h3>Iced Spanish Latte</h3>
+        <p class="menu-desc">Espresso, condensed milk, milk</p>
+        <p class="menu-price">$4.00</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <div class="menu-photo"><img src="assets/images/coffee/Iced_strawberry_matcha_latte.jpg" alt="Iced Strawberry Matcha Latte" width="400" height="400"></div>
+        <h3>Iced Strawberry Matcha Latte</h3>
+        <p class="menu-desc">Matcha, strawberry, milk</p>
+        <p class="menu-price">$4.50</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Freshly_baked_butter_croissant.jpg" alt="Butter Croissant" width="400" height="400"></div>
+        <h3>Butter Croissant</h3>
+        <p class="menu-desc">Flour, butter, yeast</p>
+        <p class="menu-price">$2.25</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Freshly_baked_pain_au_chocolat.jpg" alt="Pain au Chocolat" width="400" height="400"></div>
+        <h3>Pain au Chocolat</h3>
+        <p class="menu-desc">Flour, butter, dark chocolate</p>
+        <p class="menu-price">$2.75</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Freshly_baked_blueberry_muffin.jpg" alt="Blueberry Muffin" width="400" height="400"></div>
+        <h3>Blueberry Muffin</h3>
+        <p class="menu-desc">Flour, blueberries, butter</p>
+        <p class="menu-price">$2.50</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Double_chocolate_muffin.jpg" alt="Double Chocolate Muffin" width="400" height="400"></div>
+        <h3>Double Chocolate Muffin</h3>
+        <p class="menu-desc">Flour, cocoa, chocolate chips</p>
+        <p class="menu-price">$2.50</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Cinnamon_roll_with_white_icing.jpg" alt="Cinnamon Roll" width="400" height="400"></div>
+        <h3>Cinnamon Roll</h3>
+        <p class="menu-desc">Flour, cinnamon, white icing</p>
+        <p class="menu-price">$2.75</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Baked_chocolate_chip_cookie.jpg" alt="Chocolate Chip Cookie" width="400" height="400"></div>
+        <h3>Chocolate Chip Cookie</h3>
+        <p class="menu-desc">Flour, butter, chocolate chips</p>
+        <p class="menu-price">$1.75</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Red_velvet_cupcake_with_frosting.jpg" alt="Red Velvet Cupcake" width="400" height="400"></div>
+        <h3>Red Velvet Cupcake</h3>
+        <p class="menu-desc">Flour, cocoa, cream cheese frosting</p>
+        <p class="menu-price">$3.00</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Strawberry_cheesecake_slice.jpg" alt="Strawberry Cheesecake Slice" width="400" height="400"></div>
+        <h3>Strawberry Cheesecake Slice</h3>
+        <p class="menu-desc">Cream cheese, strawberries, biscuit base</p>
+        <p class="menu-price">$3.75</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Chocolate_brownie_on_white_background.jpg" alt="Chocolate Brownie" width="400" height="400"></div>
+        <h3>Chocolate Brownie</h3>
+        <p class="menu-desc">Chocolate, butter, eggs</p>
+        <p class="menu-price">$2.50</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Fruit_Danish_pastry_with_berries.jpg" alt="Fruit Danish" width="400" height="400"></div>
+        <h3>Fruit Danish</h3>
+        <p class="menu-desc">Puff pastry, custard, berries</p>
+        <p class="menu-price">$2.75</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Freshly_baked_almond_croissant.jpg" alt="Almond Croissant" width="400" height="400"></div>
+        <h3>Almond Croissant</h3>
+        <p class="menu-desc">Flour, butter, almonds</p>
+        <p class="menu-price">$2.75</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Portuguese_pastel_de_nata_tart.jpg" alt="Pastel de Nata" width="400" height="400"></div>
+        <h3>Pastel de Nata</h3>
+        <p class="menu-desc">Pastry, egg custard, cinnamon</p>
+        <p class="menu-price">$2.25</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Strawberry_cream_puff.jpg" alt="Strawberry Cream Puff" width="400" height="400"></div>
+        <h3>Strawberry Cream Puff</h3>
+        <p class="menu-desc">Choux pastry, cream, strawberries</p>
+        <p class="menu-price">$2.75</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/French_pain_suisse_pastry.jpg" alt="Pain Suisse" width="400" height="400"></div>
+        <h3>Pain Suisse</h3>
+        <p class="menu-desc">Pastry, custard, chocolate chips</p>
+        <p class="menu-price">$2.75</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Lemon_tart_on_white_background.jpg" alt="Lemon Tart" width="400" height="400"></div>
+        <h3>Lemon Tart</h3>
+        <p class="menu-desc">Pastry, lemon curd, sugar</p>
+        <p class="menu-price">$3.00</p>
+      </article>
+      <article class="menu-card" data-category="pastries">
+        <div class="menu-photo"><img src="assets/images/pastry/Matcha_white_chocolate_cookie.jpg" alt="Matcha White Chocolate Cookie" width="400" height="400"></div>
+        <h3>Matcha White Chocolate Cookie</h3>
+        <p class="menu-desc">Flour, matcha, white chocolate</p>
+        <p class="menu-price">$2.00</p>
+      </article>
+    </div>
+    <!-- Menu table. Same items as the cards; shown when the view button is switched. -->
+    <div class="menu-table-wrap is-hidden">
+      <table class="menu-table">
+        <caption class="visually-hidden">Menu items and prices</caption>
+        <thead>
+          <tr>
+            <th scope="col">Photo</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Ingredients</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_Americano.jpg" alt="Iced Americano" width="64" height="64"></td>
+            <td>Iced Americano</td>
+            <td>Coffee</td>
+            <td>Espresso, cold water, ice</td>
+            <td>$2.75</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_caffe_latte.jpg" alt="Iced Caffe Latte" width="64" height="64"></td>
+            <td>Iced Caffe Latte</td>
+            <td>Coffee</td>
+            <td>Espresso, cold milk, ice</td>
+            <td>$3.75</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_cappuccino.jpg" alt="Iced Cappuccino" width="64" height="64"></td>
+            <td>Iced Cappuccino</td>
+            <td>Coffee</td>
+            <td>Espresso, milk, milk foam</td>
+            <td>$3.75</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_mocha.jpg" alt="Iced Mocha" width="64" height="64"></td>
+            <td>Iced Mocha</td>
+            <td>Coffee</td>
+            <td>Espresso, chocolate, milk</td>
+            <td>$4.00</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_vanilla_latte.jpg" alt="Iced Vanilla Latte" width="64" height="64"></td>
+            <td>Iced Vanilla Latte</td>
+            <td>Coffee</td>
+            <td>Espresso, vanilla syrup, milk</td>
+            <td>$4.00</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_hazelnut_latte.jpg" alt="Iced Hazelnut Latte" width="64" height="64"></td>
+            <td>Iced Hazelnut Latte</td>
+            <td>Coffee</td>
+            <td>Espresso, hazelnut syrup, milk</td>
+            <td>$4.00</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_matcha_latte.jpg" alt="Iced Matcha Latte" width="64" height="64"></td>
+            <td>Iced Matcha Latte</td>
+            <td>Coffee</td>
+            <td>Matcha, milk, ice</td>
+            <td>$4.00</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_Dalgona_coffee.jpg" alt="Iced Dalgona Coffee" width="64" height="64"></td>
+            <td>Iced Dalgona Coffee</td>
+            <td>Coffee</td>
+            <td>Whipped coffee, milk, ice</td>
+            <td>$4.00</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_coffee_frappe.jpg" alt="Iced Coffee Frappe" width="64" height="64"></td>
+            <td>Iced Coffee Frappe</td>
+            <td>Coffee</td>
+            <td>Coffee, milk, ice</td>
+            <td>$4.25</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_brown_sugar_latte.jpg" alt="Iced Brown Sugar Latte" width="64" height="64"></td>
+            <td>Iced Brown Sugar Latte</td>
+            <td>Coffee</td>
+            <td>Espresso, brown sugar, milk</td>
+            <td>$4.00</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_white_chocolate_mocha.jpg" alt="Iced White Chocolate Mocha" width="64" height="64"></td>
+            <td>Iced White Chocolate Mocha</td>
+            <td>Coffee</td>
+            <td>Espresso, white chocolate, milk</td>
+            <td>$4.25</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_caramel_macchiato.jpg" alt="Iced Caramel Macchiato" width="64" height="64"></td>
+            <td>Iced Caramel Macchiato</td>
+            <td>Coffee</td>
+            <td>Espresso, caramel, milk</td>
+            <td>$4.25</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_dirty_matcha_latte.jpg" alt="Iced Dirty Matcha Latte" width="64" height="64"></td>
+            <td>Iced Dirty Matcha Latte</td>
+            <td>Coffee</td>
+            <td>Matcha, espresso, milk</td>
+            <td>$4.25</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Cold_brew_coffee.jpg" alt="Cold Brew Coffee" width="64" height="64"></td>
+            <td>Cold Brew Coffee</td>
+            <td>Coffee</td>
+            <td>Coffee, cold water, ice</td>
+            <td>$3.25</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_Spanish_latte.jpg" alt="Iced Spanish Latte" width="64" height="64"></td>
+            <td>Iced Spanish Latte</td>
+            <td>Coffee</td>
+            <td>Espresso, condensed milk, milk</td>
+            <td>$4.00</td>
+          </tr>
+          <tr class="menu-row" data-category="coffee">
+            <td><img src="assets/images/coffee/Iced_strawberry_matcha_latte.jpg" alt="Iced Strawberry Matcha Latte" width="64" height="64"></td>
+            <td>Iced Strawberry Matcha Latte</td>
+            <td>Coffee</td>
+            <td>Matcha, strawberry, milk</td>
+            <td>$4.50</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Freshly_baked_butter_croissant.jpg" alt="Butter Croissant" width="64" height="64"></td>
+            <td>Butter Croissant</td>
+            <td>Pastry</td>
+            <td>Flour, butter, yeast</td>
+            <td>$2.25</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Freshly_baked_pain_au_chocolat.jpg" alt="Pain au Chocolat" width="64" height="64"></td>
+            <td>Pain au Chocolat</td>
+            <td>Pastry</td>
+            <td>Flour, butter, dark chocolate</td>
+            <td>$2.75</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Freshly_baked_blueberry_muffin.jpg" alt="Blueberry Muffin" width="64" height="64"></td>
+            <td>Blueberry Muffin</td>
+            <td>Pastry</td>
+            <td>Flour, blueberries, butter</td>
+            <td>$2.50</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Double_chocolate_muffin.jpg" alt="Double Chocolate Muffin" width="64" height="64"></td>
+            <td>Double Chocolate Muffin</td>
+            <td>Pastry</td>
+            <td>Flour, cocoa, chocolate chips</td>
+            <td>$2.50</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Cinnamon_roll_with_white_icing.jpg" alt="Cinnamon Roll" width="64" height="64"></td>
+            <td>Cinnamon Roll</td>
+            <td>Pastry</td>
+            <td>Flour, cinnamon, white icing</td>
+            <td>$2.75</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Baked_chocolate_chip_cookie.jpg" alt="Chocolate Chip Cookie" width="64" height="64"></td>
+            <td>Chocolate Chip Cookie</td>
+            <td>Pastry</td>
+            <td>Flour, butter, chocolate chips</td>
+            <td>$1.75</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Red_velvet_cupcake_with_frosting.jpg" alt="Red Velvet Cupcake" width="64" height="64"></td>
+            <td>Red Velvet Cupcake</td>
+            <td>Pastry</td>
+            <td>Flour, cocoa, cream cheese frosting</td>
+            <td>$3.00</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Strawberry_cheesecake_slice.jpg" alt="Strawberry Cheesecake Slice" width="64" height="64"></td>
+            <td>Strawberry Cheesecake Slice</td>
+            <td>Pastry</td>
+            <td>Cream cheese, strawberries, biscuit base</td>
+            <td>$3.75</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Chocolate_brownie_on_white_background.jpg" alt="Chocolate Brownie" width="64" height="64"></td>
+            <td>Chocolate Brownie</td>
+            <td>Pastry</td>
+            <td>Chocolate, butter, eggs</td>
+            <td>$2.50</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Fruit_Danish_pastry_with_berries.jpg" alt="Fruit Danish" width="64" height="64"></td>
+            <td>Fruit Danish</td>
+            <td>Pastry</td>
+            <td>Puff pastry, custard, berries</td>
+            <td>$2.75</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Freshly_baked_almond_croissant.jpg" alt="Almond Croissant" width="64" height="64"></td>
+            <td>Almond Croissant</td>
+            <td>Pastry</td>
+            <td>Flour, butter, almonds</td>
+            <td>$2.75</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Portuguese_pastel_de_nata_tart.jpg" alt="Pastel de Nata" width="64" height="64"></td>
+            <td>Pastel de Nata</td>
+            <td>Pastry</td>
+            <td>Pastry, egg custard, cinnamon</td>
+            <td>$2.25</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Strawberry_cream_puff.jpg" alt="Strawberry Cream Puff" width="64" height="64"></td>
+            <td>Strawberry Cream Puff</td>
+            <td>Pastry</td>
+            <td>Choux pastry, cream, strawberries</td>
+            <td>$2.75</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/French_pain_suisse_pastry.jpg" alt="Pain Suisse" width="64" height="64"></td>
+            <td>Pain Suisse</td>
+            <td>Pastry</td>
+            <td>Pastry, custard, chocolate chips</td>
+            <td>$2.75</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Lemon_tart_on_white_background.jpg" alt="Lemon Tart" width="64" height="64"></td>
+            <td>Lemon Tart</td>
+            <td>Pastry</td>
+            <td>Pastry, lemon curd, sugar</td>
+            <td>$3.00</td>
+          </tr>
+          <tr class="menu-row" data-category="pastries">
+            <td><img src="assets/images/pastry/Matcha_white_chocolate_cookie.jpg" alt="Matcha White Chocolate Cookie" width="64" height="64"></td>
+            <td>Matcha White Chocolate Cookie</td>
+            <td>Pastry</td>
+            <td>Flour, matcha, white chocolate</td>
+            <td>$2.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Oat milk is $0.50 extra. Ask at the counter if you want it less sweet.</p>
+  </main>
+
+  <!-- Footer: address, hours, copyright -->
+  <footer class="site-footer">
+    <!-- Footer logo and links -->
+    <div class="footer-top">
+      <a href="index.html"><img src="assets/images/general/logo.png" alt="Jake's Coffee" width="150" height="98"></a>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <p>No. 27, Street 308, Boeung Keng Kang 1, Phnom Penh</p>
+    <p>Mon-Fri 7:00 a.m. - 6:30 p.m. Sat-Sun 8:00 a.m. - 5:00 p.m.</p>
+    <p>&copy; 2026 Jake's Coffee</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

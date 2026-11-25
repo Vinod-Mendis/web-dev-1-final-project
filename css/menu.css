@@ -1,0 +1,206 @@
+/* Menu page styles */
+
+/* Page background pattern */
+body {
+  background-image: linear-gradient(rgba(241, 246, 236, 0.97), rgba(241, 246, 236, 0.97)), url("../assets/images/general/pattern.png");
+  background-size: auto, 60rem;
+  background-repeat: no-repeat, repeat;
+}
+
+/* Page title */
+.menu-page > h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.menu-page h2 {
+  max-width: none;
+}
+
+/* Filter buttons */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filter-button {
+  margin: 0;
+  padding: 0.35rem 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: var(--color-muted);
+  letter-spacing: 0.14em;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.filter-button:hover,
+.filter-button:active {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.filter-button.is-active,
+.filter-button.is-active:hover {
+  background: transparent;
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+
+/* Card / table view button, pushed to the far right of the filters */
+.view-toggle {
+  margin: 0 0 0 auto;
+  padding: 0.35rem 0;
+  border: none;
+  border-bottom: 1px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-text);
+  letter-spacing: 0.14em;
+}
+
+.view-toggle:hover,
+.view-toggle:active {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+/* Menu table */
+.menu-table {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.menu-table th {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-text);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.menu-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.menu-table td:first-child,
+.menu-table th:first-child {
+  padding-left: 0;
+}
+
+.menu-table td:last-child,
+.menu-table th:last-child {
+  text-align: right;
+  font-weight: 500;
+}
+
+.menu-table img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+/* Screen reader only */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Menu grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Menu card */
+.menu-card {
+  margin: 0;
+}
+
+/* Card photo tile */
+.menu-photo {
+  aspect-ratio: 1;
+  margin-bottom: 0.9rem;
+  background: #e4ecdb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.menu-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+/* Card photo hover zoom */
+.menu-card:hover .menu-photo img {
+  transform: scale(1.1);
+}
+
+/* Card name */
+.menu-card h3 {
+  margin-bottom: 0.2rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Card ingredients and price */
+.menu-desc {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--color-muted);
+}
+
+.menu-price {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Note under the menu */
+.note {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+/* Tablet and mobile */
+@media (max-width: 60rem) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 40rem) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 0.75rem;
+  }
+
+  /* Table: hide the type and ingredients columns */
+  .menu-table th:nth-child(3),
+  .menu-table td:nth-child(3),
+  .menu-table th:nth-child(4),
+  .menu-table td:nth-child(4) {
+    display: none;
+  }
+}
