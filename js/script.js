@@ -92,6 +92,15 @@ function isValidEmail(email) {
   return at > 0 && dot > at + 1 && dot < email.length - 1;
 }
 
+var phoneInput = document.querySelector("#phone");
+
+// Phone field: keep only digits, spaces, "+" and "-" as the user types
+if (phoneInput) {
+  phoneInput.addEventListener("input", function () {
+    phoneInput.value = phoneInput.value.replace(/[^0-9+\- ]/g, "");
+  });
+}
+
 if (contactForm && formMessage) {
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -117,6 +126,11 @@ if (contactForm && formMessage) {
 
     if (reply.value === "phone" && phone === "") {
       formMessage.textContent = "Please add a phone number so we can call you back.";
+      return;
+    }
+
+    if (phone !== "" && !/^\+?[0-9 \-]{6,}$/.test(phone)) {
+      formMessage.textContent = "Please enter a phone number using numbers only, like 012 880 442.";
       return;
     }
 
