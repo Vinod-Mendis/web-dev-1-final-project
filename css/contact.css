@@ -1,0 +1,220 @@
+﻿/* Contact page styles */
+
+
+.contact-page {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  column-gap: 4rem;
+  align-items: start;
+}
+
+.contact-page > h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-page > h1,
+.contact-page > .intro {
+  grid-column: 1 / -1;
+}
+
+.contact-page > section {
+  margin-bottom: 0;
+}
+
+/* Form groups and labels */
+fieldset {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0 0 1.5rem;
+  padding: 1.1rem 0 0.25rem;
+  background: transparent;
+}
+
+legend {
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+label {
+  display: block;
+  margin-top: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+fieldset p {
+  margin: 1.3rem 0 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Form fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  max-width: none;
+  padding: 0.55rem 0;
+  border: none;
+  border-bottom: 1px solid var(--color-text);
+  border-radius: 0;
+  font: inherit;
+  font-weight: 400;
+  color: var(--color-text);
+  background: transparent;
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-bottom-color: var(--color-accent);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 1px 0 var(--color-accent);
+}
+
+/* Form success and error message */
+.form-message {
+  min-height: 1.5em;
+}
+
+.form-message:not(.error):not(:empty) {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.form-message.error {
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+/* Shop info panel */
+.shop-panel {
+  background: var(--color-text);
+  color: #f1f6ec;
+  padding: 1rem 1rem 1.6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Panel bean background */
+.shop-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -50%;
+  width: 100%;
+  background-image: url("../assets/images/general/coffee-seed-bg.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Panel content stays above the beans */
+.shop-panel h2,
+.shop-panel .location-image,
+.shop-panel .details {
+  position: relative;
+  z-index: 1;
+}
+
+.shop-panel h2 {
+  color: #f1f6ec;
+  font-size: 2.2rem;
+  margin: 0.4rem 0.35rem 1rem;
+}
+
+.location-image {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 10;
+  margin: 0 0 0.5rem;
+  border: none;
+  object-fit: cover;
+}
+
+/* Shop details list (address, hours) */
+.details {
+  margin: 14rem 0.35rem 0;
+}
+
+.details dt {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c9deb8;
+}
+
+.details dd {
+  margin: 0.2rem 0 0;
+}
+
+.shop-panel a:link,
+.shop-panel a:visited {
+  color: #f1f6ec;
+}
+
+.shop-panel a:hover,
+.shop-panel a:active {
+  color: #dcebcc;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .location-image {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 36rem) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+  .location-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-page {
+    row-gap: 2.5rem;
+  }
+}
